@@ -5,17 +5,33 @@ $white : #fff;
 $waikawa-gray: #5A668A;
 $periwinkle-gray: #C2CBE5;
 
-* {
-    box-sizing: border-box;
-}
-
 body {
+    background: url(../assets/mobile/image-host.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
     font-family: 'Chivo', sans-serif;
     margin: 0;
     padding: 0;
+    z-index: 1;
+
 }
 
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
     padding: 0;
 }
+
+
+footer { 
+    padding-top: 10px; 
+    font-size: 11px; 
+    text-align: center;
+    color: #54E6AF;
+    font-weight: 400;
+    
+    a { 
+        color: $waikawa-gray; 
+    }
+}
+
