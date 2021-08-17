@@ -60,6 +60,8 @@ Users should be able to:
 
 - HTML
 - CSS
+- Sass
+- BEM
 - Mobile-first workflow
 - Flexbox
 
