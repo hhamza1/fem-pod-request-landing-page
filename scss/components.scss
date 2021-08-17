@@ -1,0 +1,78 @@
+header {
+    padding-bottom: 27px;
+}
+
+.main-title {
+    color: $eucalyptus;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-align: center;
+    
+
+
+    span {
+        color: $white;
+    }
+
+}
+
+.main-paragraph {
+    color: $periwinkle-gray;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+}
+
+input {
+    background-color: $martinique;
+    border: 0;
+    border-radius: 28px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 32px;
+    color: $white;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 1px;
+
+    &:active {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $white;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 1px;
+        opacity: 0.5;
+    }
+}
+
+.btn {
+    background-color: $eucalyptus;
+    color: $mirage;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border: 0;
+    border-radius: 28px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    text-transform: capitalize;
+    transition: all .3s ease-in-out;
+
+
+    &:hover {
+        background-color: $eucalyptus;
+        filter: brightness(120%);
+    }
+}
+
