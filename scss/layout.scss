@@ -1,0 +1,42 @@
+body::before {
+    content: '';
+    background-color: rgba($mirage, .9);
+    background-size: cover;
+    z-index: -99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.container {
+    padding : 60px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: fit-content;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 36px;
+}
+
+.logo-gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    justify-items: center;
+    align-items: center;
+
+    img {
+        max-width: 60px;
+    }
+}
+
