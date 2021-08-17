@@ -1,16 +1,138 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
+  background: url(../assets/mobile/image-host.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
   font-family: "Chivo", sans-serif;
   margin: 0;
   padding: 0;
+  z-index: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+footer {
+  padding-top: 10px;
+  font-size: 11px;
+  text-align: center;
+  color: #54E6AF;
+  font-weight: 400;
+}
+footer a {
+  color: #5A668A;
+}
+
+header {
+  padding-bottom: 27px;
+}
+
+.main-title {
+  color: #54E6AF;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 38px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main-title span {
+  color: #fff;
+}
+
+.main-paragraph {
+  color: #C2CBE5;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+}
+
+input {
+  background-color: #2C344B;
+  border: 0;
+  border-radius: 28px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 32px;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 1px;
+}
+input:active {
+  outline: none;
+}
+input::placeholder {
+  color: #fff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+.btn {
+  background-color: #54E6AF;
+  color: #121725;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: 0;
+  border-radius: 28px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: #54E6AF;
+  filter: brightness(120%);
+}
+
+body::before {
+  content: "";
+  background-color: rgba(18, 23, 37, 0.9);
+  background-size: cover;
+  z-index: -99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  padding: 60px 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: fit-content;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 36px;
+}
+
+.logo-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  justify-items: center;
+  align-items: center;
+}
+.logo-gallery img {
+  max-width: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
