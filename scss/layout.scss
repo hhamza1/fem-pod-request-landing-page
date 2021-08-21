@@ -43,25 +43,60 @@ body::before {
 
 @include tablet {
     body::before {
-        content: '';
+        content: '';    
         background: url(../assets/tablet/image-host.jpg);
         background-repeat: no-repeat;
         position: absolute;
-        max-width: 64%;
-        max-height: 75%;
         top: 0;
-        left: 38%;
+        left: 48%;
+        max-height: 75%;
+        max-width: 491px;
+    }
+
+    .container {
+        display: grid;
+        justify-content: flex-start;
+        padding-left: 39px;
     }
 
 
-    body::after {
-        content: '';
-        background: url(../assets/desktop/bg-pattern-dots.svg);
-        background-repeat: no-repeat;
-        position: absolute;
-        bottom: 0;
-        left: 30px;
-        width: 232px;
-        height: 104px;
+    main {
+        display: flex;
+        flex-direction: column;
+        background: $mirage;
+        margin-top: 75px;
+        padding-top: 75px;
+        max-width: 85%;
+        gap: 0;
     }
+
+    .input-group {
+        order: 3;
+        display: flex;
+        flex-direction: row;
+        background: $martinique;
+        padding: 5px 5px 5px 0;
+        border-radius: 28px;
+        max-width: 68%;
+        gap: 0;
+
+        & > .btn{
+           max-width: 162px;
+           justify-self: flex-end;
+        }
+    }
+
+    .logo-gallery {
+        order: 4;
+        margin-top: 32px;
+        padding-top: 32px;
+        grid-gap: 20px;
+        
+
+        img {
+            min-width: 96px;
+        }
+    }
+
+
 }

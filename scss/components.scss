@@ -39,6 +39,7 @@ input {
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 1px;
+    flex-grow: 3;
 
     &:active {
         outline: none;
@@ -73,5 +74,23 @@ input {
     &:hover {
         background-color: $eucalyptus;
         filter: brightness(120%);
+    }
+}
+
+
+@include  tablet {
+    .main-paragraph, .main-title {
+        text-align: left;
+    }
+
+    .main-title {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .main-paragraph {
+        font-size: 18px;
+        line-height: 28px;
+        width: 68%;
     }
 }
