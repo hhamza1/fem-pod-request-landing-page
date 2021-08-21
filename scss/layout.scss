@@ -43,12 +43,12 @@ body::before {
 
 @include tablet {
     body::before {
-        content: '';    
+        content: '';
+        position: absolute;
         background: url(../assets/tablet/image-host.jpg);
         background-repeat: no-repeat;
-        position: absolute;
         top: 0;
-        left: 48%;
+        left: 45%;
         max-height: 75%;
         max-width: 491px;
     }
@@ -68,6 +68,7 @@ body::before {
         padding-top: 75px;
         max-width: 85%;
         gap: 0;
+        padding-right: 35px;
     }
 
     .input-group {
@@ -83,6 +84,7 @@ body::before {
         & > .btn{
            max-width: 162px;
            justify-self: flex-end;
+           padding: 9px 27px;
         }
     }
 
@@ -94,7 +96,7 @@ body::before {
         
 
         img {
-            min-width: 96px;
+            max-width: 129px;
         }
     }
 
