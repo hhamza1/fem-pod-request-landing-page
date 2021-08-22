@@ -39,6 +39,11 @@ footer a {
     position: relative;
   }
 }
+@media (min-width: 1024px) {
+  body {
+    background: #121725;
+  }
+}
 header {
   padding-bottom: 27px;
 }
@@ -91,8 +96,24 @@ input::placeholder {
   opacity: 0.5;
 }
 
+.error-msg {
+  color: red;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: 32px;
+  padding-top: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.display-error {
+  opacity: 1;
+}
+
 .btn {
   background-color: #54E6AF;
+  cursor: pointer;
   color: #121725;
   padding-top: 9px;
   padding-bottom: 9px;
@@ -124,6 +145,26 @@ input::placeholder {
     font-size: 18px;
     line-height: 28px;
     max-width: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    padding: 0 0 0 35px;
+  }
+
+  .main-paragraph, .main-title {
+    text-align: left;
+  }
+
+  .main-title {
+    font-size: 52px;
+    line-height: 56px;
+  }
+
+  .main-paragraph {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 60%;
   }
 }
 .container::before {
@@ -224,6 +265,74 @@ input::placeholder {
     margin-top: 32px;
     padding-top: 32px;
     grid-gap: 20px;
+  }
+  .logo-gallery img {
+    max-width: 129px;
+  }
+}
+@media (min-width: 1024px) {
+  .container::before {
+    content: "";
+    background: url(../assets/desktop/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 70% 80%;
+  }
+
+  .container::after {
+    content: "";
+    position: absolute;
+    background: url(../assets/desktop/bg-pattern-dots.svg);
+    background-repeat: no-repeat;
+    bottom: 20px;
+    right: 0;
+    width: 232px;
+    height: 104px;
+  }
+
+  .container {
+    display: grid;
+    justify-content: flex-start;
+    padding-left: 39px;
+    grid-gap: 40px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    background: #121725;
+    padding: 75px 35px 15px 35px;
+    max-width: 55%;
+    gap: 0;
+  }
+
+  .input-group-container {
+    padding-bottom: 30px;
+  }
+
+  .input-group {
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    background: #2C344B;
+    padding: 5px 5px 5px 0;
+    border-radius: 28px;
+    max-width: 68%;
+    gap: 0;
+  }
+  .input-group input {
+    outline: none;
+  }
+  .input-group > .btn {
+    max-width: 162px;
+    justify-self: flex-end;
+    padding: 9px 27px;
+  }
+
+  .logo-gallery {
+    order: 4;
+    grid-gap: 0;
+    justify-items: flex-start;
   }
   .logo-gallery img {
     max-width: 129px;

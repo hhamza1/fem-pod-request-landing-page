@@ -58,3 +58,9 @@ footer {
         position: relative;
     }
 }
+
+@include desktop {
+    body {
+        background: $mirage;
+    }
+}
