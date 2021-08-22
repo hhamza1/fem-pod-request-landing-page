@@ -35,10 +35,10 @@ Users should be able to:
 ![Tablet View](./screenshots/tablet-view.png)
 
 #### Desktop View
-![Desktop View]()
+![Desktop View](./screenshots/desktop-view.png)
 
 #### Desktop View - Active state
-![Desktop View - Active state]()
+![Desktop View - Active state](./screenshots/desktop-active.png)
 
 ### Links
 
@@ -49,8 +49,33 @@ Users should be able to:
 
 ### What I learned
 
+- Using Sass made things easier for many classes and different changes. It also allowed me to deconstruct the styling on different layers. It will still more structure and refactoring. 
 
-```css
+- A bit of challenge was to move from mobile to tablet especially that the main HTML structure was mobile-oriented but I managed to deal with it.
+
+- The email validity code I already used for previous project. Refactored to match some aspects of modern JS syntax (I am really proud of it that I reuse whenever possible😅😋)
+
+```js
+let email = document.querySelector("#email");
+const errorMsg = document.querySelector("#error");
+const form = document.querySelector("form");
+
+let emailValidity = email.validity;
+
+let emailValidation = (input, validator) => {
+    if(!validator.valid || input.value === ""){
+        errorMsg.classList.add("display-error");
+    }
+    else {
+        errorMsg.classList.remove("display-error");
+    }
+}
+
+form.addEventListener("submit", e =>{
+    e.preventDefault();
+    console.log(e.target.value);
+    emailValidation(email, emailValidity);
+})
 
 ```
 
@@ -63,6 +88,7 @@ Users should be able to:
 - Sass
 - Mobile-first workflow
 - Flexbox
+- Vanilla Javascript
 
 ## Author
 
