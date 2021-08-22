@@ -5,7 +5,12 @@ const form = document.querySelector("form");
 let emailValidity = email.validity;
 
 let emailValidation = (input, validator) => {
-    if(!validator.valid || input.value === ""){
+    if(input.value === ""){
+        errorMsg.innerHTML = "Oops! Please add your email";
+        errorMsg.classList.add("display-error");
+    }
+    else if(!validator.valid){
+        errorMsg.innerHTML = "Oops! Please check your email";
         errorMsg.classList.add("display-error");
     }
     else {
