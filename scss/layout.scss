@@ -1,4 +1,4 @@
-body::before {
+.container::before {
     content: '';
     background-color: rgba($mirage, .9);
     background-size: cover;
@@ -42,15 +42,22 @@ body::before {
 
 
 @include tablet {
-    body::before {
-        content: '';
-        position: absolute;
+    .container::before {
+        content: "";
         background: url(../assets/tablet/image-host.jpg);
         background-repeat: no-repeat;
-        top: 0;
-        left: 45%;
-        max-height: 75%;
-        max-width: 491px;
+        background-position: right top;
+    }
+
+    .container::after {
+        content: '';
+        position: absolute;
+        background: url(../assets/desktop/bg-pattern-dots.svg);
+        background-repeat: no-repeat;
+        bottom: 0;
+        left: 30px;
+        width: 232px;
+        height: 104px;
     }
 
     .container {
@@ -69,6 +76,7 @@ body::before {
         max-width: 85%;
         gap: 0;
         padding-right: 35px;
+        margin-bottom: 150px;
     }
 
     .input-group {
@@ -101,4 +109,8 @@ body::before {
     }
 
 
+}
+
+@include desktop {
+    
 }
