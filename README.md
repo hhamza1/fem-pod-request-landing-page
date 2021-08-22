@@ -49,9 +49,9 @@ Users should be able to:
 
 ### What I learned
 
-- Using Sass made things easier for many classes and different changes. It also allowed me to deconstruct the styling on different layers. It will still more structure and refactoring. 
+- Using Sass made things easier in the responsiveness and styling. It also allowed me to deconstruct the styling into different layers. I still need to be better structure and refactore it to make it DRY. 
 
-- A bit of challenge was to move from mobile to tablet especially that the main HTML structure was mobile-oriented but I managed to deal with it.
+- A bit of challenge was to move from mobile to tablet especially that the body structure was mobile-oriented at first but I managed to deal with it.
 
 - The email validity code I already used for previous project. Refactored to match some aspects of modern JS syntax (I am really proud of it that I reuse whenever possible😅😋)
 
@@ -63,7 +63,12 @@ const form = document.querySelector("form");
 let emailValidity = email.validity;
 
 let emailValidation = (input, validator) => {
-    if(!validator.valid || input.value === ""){
+    if(input.value === ""){
+        errorMsg.innerHTML = "Oops! Please add your email";
+        errorMsg.classList.add("display-error");
+    }
+    else if(!validator.valid){
+        errorMsg.innerHTML = "Oops! Please check your email";
         errorMsg.classList.add("display-error");
     }
     else {
@@ -81,6 +86,8 @@ form.addEventListener("submit", e =>{
 
 ### Useful resources
 
+- MDN documentation on ValidityState : https://developer.mozilla.org/en-US/docs/Web/API/ValidityState 
+
 ### Built with
 
 - HTML
@@ -88,7 +95,8 @@ form.addEventListener("submit", e =>{
 - Sass
 - Mobile-first workflow
 - Flexbox
-- Vanilla Javascript
+- Javascript
+- Web APIs
 
 ## Author
 
